@@ -1,0 +1,50 @@
+Running 4 processes
+
+julia runindexer.jl schuberm 4
+
+	From worker 5:		downloaded in 3.310854911804199secs
+	From worker 3:		downloaded in 3.459351062774658secs
+	From worker 4:		downloaded in 3.881157159805298secs
+	From worker 2:		downloaded in 3.9911580085754395secs
+	From worker 5:		processing time 306.59685492515564secs
+	From worker 3:		processing time 375.3166890144348secs
+	From worker 4:		processing time 467.1393141746521secs
+	From worker 2:		processing time 496.5686810016632secs
+elapsed time: 506.936012785 seconds (102816916 bytes allocated)
+
+
+julia runsearcher.jl schuberm "ballet and megan"
+
+results:
+http://www.gomemphis.com/news/2009/nov/06/no-headline---2009-11-05-095820482508/
+http://www.epiccarnival.com/2007/10/main-attraction-nightmare-way-before.html
+http://www.epiccarnival.com/2008/07/bob-round-1-nice-bum-where-ya-froms-vs.html
+
+elapsed time: 3.025533514 seconds (254487520 bytes allocated)
+
+
+julia runsearcher.jl schuberm "ballet or megan"
+
+results:
+http://www.wifedating.net/memberid/430690_5645731b
+http://mysticballet.org/fiona-hulands/
+http://www.gomemphis.com/news/2009/nov/06/no-headline---2009-11-05-095820482508/
+http://herfitnesshut.com/sitemap.xml
+http://www.glitternfool.com/2009/03/20/spring-is-here---lovely-as-a-tree.aspx
+http://www.epiccarnival.com/2007/10/main-attraction-nightmare-way-before.html
+http://www.epiccarnival.com/2008/07/bob-round-1-nice-bum-where-ya-froms-vs.html
+http://www.sachipon.jp/archives/618
+http://www.globalpolitics.cz/clanky/preshranicni-struktury-eu
+http://www.africanprepaid.com/cheap_rate_to/indonesia_card_page6.htm
+http://www.dealerxpressofauburn.com/components/com_jcomments/05_Bart_de_noche.part1.rar-p-1083.html
+http://www.globalpolitics.cz/clanky/teorie-evropske-integrace
+http://www.abc-irodaszer.hu/iroszer/tollbetetceruzabetet/radirok.html
+http://www.scapinoballet.nl/nl/pages/voorstellingen+seizoen_2008_2009+de_notenkraker_1
+http://www.stachepassions.com/seeme/wdr1974.html
+http://www.etia-properties.com/en_druck_155.htm
+http://www.scapinoballet.nl/nl/pages/het_gezelschap_2+tableau_de_la_troupe+sherida_lie
+
++more
+
+elapsed time: 3.116222663 seconds (256639336 bytes allocated)
+

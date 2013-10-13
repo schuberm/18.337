@@ -59,11 +59,14 @@ function create_index(n_archives::Int)
     # (use archive_to_index_filename)
 
     ## YOUR CODE HERE ##
-    for i = 1:n_archives
-       	f=open(archive_to_index_filename(arc_file_uris[i]),"w")
-	(ind,docs)=archive_to_index(cc,arc_file_uris[i])
-	write(f,json(ind))
-   	close(f) 
+#   for i = 1:n_archives
+#	r = remotecall(1+i%(cc_instnum+cc_instnumworkers),archive_to_index, cc, arc_file_uris[i])
+#	as_serialized(fetch(r),archive_to_index_filename(arc_file_uris[i]))
+#    end
+@sync begin
+  @parallel for i = 1:n_archives
+	as_serialized(archive_to_index(cc,arc_file_uris[i]),archive_to_index_filename(arc_file_uris[i]))
     end
+end
     
 end
